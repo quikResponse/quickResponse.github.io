@@ -6,15 +6,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mina">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+body,h1,h2,h3,h4,h5,h6 {font-family: "Mina", sans-serif}
 body, html {
     height: 100%;
     line-height: 1.8;
 }
-
+html {
+  scroll-behavior: smooth;
+}
 /* Full height image header */
 .bgimg-1 {
     background-position: center;
@@ -25,6 +27,18 @@ body, html {
 }
 .w3-bar .w3-button {
     padding: 16px;
+}
+.w3-button:hover{
+  background-color: black !important;
+  color: #FFEB3B !important;
+}
+.yel{
+  background-color: #FFEB3B;
+  color: black;
+}
+.yel:hover{
+  background-color: black !important;
+  color: #FFEB3B !important;
 }
 </style>
 <body>
@@ -59,20 +73,23 @@ body, html {
 </nav>
 
 <!-- Header with full-height image -->
-<header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
+<header class="bgimg-1 w3-display-container" id="home">
+  <div class="w3-display-left w3-text-white" style="padding:80px">
+    <h1 class="">Quick Response Services</h1>
+  </div>
   <div class="w3-display-left w3-text-white" style="padding:80px">
     <div class="w3-row-padding w3-center" style="margin-top:181px"></div>
-    <p><a href="#about" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Learn more and start today</a></p>
-  </div> 
+    <p><a href="#about" class="w3-button yel w3-padding-large w3-large w3-margin-top ">Learn more</a></p>
+  </div>
 
   <div class="w3-display-bottomleft w3-text-grey w3-large" style="padding:24px 48px">
-    
+
   </div>
 </header>
 <!-- About Section -->
 <div class="w3-container" style="padding:64px 40px" id="about">
   <h2 class="w3-center">ABOUT THE COMPANY</h2>
-  <p class="w3-center w3-large">Quick Response is a licensed Home Restoration Company. We provide professional, emergency home restoration services to remedy any damage. Our team of certified technicians are equipped to solve any problems which may have disturbed your home. We  understand the struggle home owners endure during these emergencies. We strive to be your 1-stop solution to quick and reliable home restoration. We cater to clients throughout the lower mainland. Call us today.</p>
+  <p class="w3-large">Quick Response is a licensed Home Restoration Company. We provide professional, emergency home restoration services to remedy any damage. Our team of certified technicians are equipped to solve any problems which may have disturbed your home. We  understand the struggle home owners endure during these emergencies. We strive to be your 1-stop solution to quick and reliable home restoration. We &nbsp; &nbsp;&nbsp;    cater to clients throughout the lower mainland. Call us today.</p>
   <div class="w3-row-padding w3-center" style="margin-top:32px">
     <p>
     </p>
@@ -89,7 +106,7 @@ body, html {
   <div class="w3-row-padding w3-center" style="margin-top:18px">
     <div class="w3-quarter">
       <i class="fa fa-cog w3-margin-bottom w3-jumbo w3-center"></i>
-      <p class="w3-large">Reliable</p>
+      <p class="w3-large">Reliability</p>
       <p>Reliability is our commitiment to professionalism. Our clients feel comfortable when they know what to expect.</p>
     </div>
     <div class="w3-quarter">
@@ -99,7 +116,7 @@ body, html {
     </div>
     <div class="w3-quarter">
       <i class="fa fa-superpowers w3-margin-bottom w3-jumbo"></i>
-      <p class="w3-large">Efficient</p>
+      <p class="w3-large">Efficiency</p>
       <p>We understand the stress water damage causes to home owners, which is why effeciency is one of our main pillars.</p>
     </div>
     <div class="w3-quarter">
@@ -112,31 +129,35 @@ body, html {
 
 
 <!-- Services Section -->
-<div class="w3-container" style="padding:100px 64px" id="services">
+<div class="w3-container" style="padding:60px 64px 30px" id="services">
   <h2 class="w3-center">OUR SERVICES</h2>
   <div class="w3-row-padding w3-center" style="margin-top:64px">
     <p> Quick Reponse Restorations offers emergency like services. Our certified technicians will respond to your property to mitigate the water damage.
     </p>
   </div>
 
-  <div class="w3-half">
-    <div class="w3-row-padding" style="margin-top:64px">
-      <h3>Category 1:</h3>
-      <ul>
-        <li>Clean Water</li>
-      </ul>
-      <h3>Category 2:</h3>
-      <ul>
-        <li>Professional & Ethical Cleaning</li>
-      </ul>
-      <h3>Category 3:</h3>
-      <u>
-        <li></li>
-      </u>
+  <div class="w3-row-padding w3-center" style="margin-top:18px;">
+    <div class="w3-third">
+      <h3>Category 1</h3>
+
+        <p>"Clean Water" from a source with no risk of sickness or discomfort. Clean water may possibly be contaminated depending on the environment as it can mix with soil or debris.
+        </p>
     </div>
+    <div class="w3-third">
+      <h3>Category 2</h3>
+        <p>"Grey Water" has a significant degree of chemical, biological, and or physical contamination. If untreated it can present a significant health risk Our certified technicians will mitigate the damage and remove all affected by the "Grey Water" as it can lead to mold growth.
+        </p>
+      </div>
+    <div class="w3-third">
+      <h3>Category 3</h3>
+        <p>"Black Water" which contains pathogenic agents from sewage or other contaminated water sources. Category 3 or Black water can cause discomfort and or sickness if exposed and untreated.
+        </p>
+</div>
   </div>
 
-  <div class="w3-half">  
+
+
+  <div class="w3-half">
     <div class="w3-row-padding" style="margin-top:64px">
       <div class="w3-col l4 m9">
         <img src="tub.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="">
@@ -196,16 +217,16 @@ body, html {
 
 
 <!-- Pricing Section -->
-<div class="w3-container w3-center w3-light-grey" style="padding:72px 128px" id="pricing">
+<div class="w3-container w3-center w3-light-grey" style="padding:72px 78px" id="pricing">
   <h2>PRICING</h2>
   <div class="w3-row-padding" style="margin-top:50px">
   <h3>Get a free estimate today! </h3>
   <div class="w3-row-padding" style="margin-top:72px">
-  <p class="w3-medium"> Get you an estimate that will best fit you and your homes needs. Book yours today by sending us a message! Click Below To Contact Us!</p> 
+  <p class="w3-medium"> Get you an estimate that will best fit you and your homes needs. Book yours today by sending us a message! Click Below To Contact Us!</p>
   </div>
   </div>
   <div class="w3-row-padding" style="margin-top:128px">
-    <a href="#contact" class="w3-button w3-white"><i class="fa fa-arrow-down w3-margin-right"></i>Contact Us Now!</a>
+    <a href="#contact" class="w3-button yel"><i class="fa fa-arrow-down w3-margin-right"></i>Contact Us Now!</a>
   </div>
   <div class="w3-row-padding" style="margin-top:32px">
   </div>
@@ -218,8 +239,8 @@ body, html {
   <div class="w3-row-padding" style="margin-top:32px">
     <div class="w3-half">
       <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Vanoucer, B.C</p>
-      <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: 605 719-1587</p>
-      <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: contact@QuickResponses.ca</p>
+      <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> +1 (605) 719-1587</p>
+      <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> contact@quickresponses.ca</p>
       <br>
       <form action="/action_page.php" target="_blank">
         <p><input class="w3-input w3-border" type="text" placeholder="Name" required name="Name"></p>
@@ -242,9 +263,9 @@ body, html {
 
 <!-- Footer -->
 <footer class="w3-center w3-black w3-padding-64">
-  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  <a href="#home" class="w3-button yel"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
   <div class="w3-xlarge w3-section">
-    
+
 
   </div>
 </footer>
