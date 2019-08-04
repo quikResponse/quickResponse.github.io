@@ -17,6 +17,70 @@ body, html {
 html {
   scroll-behavior: smooth;
 }
+
+@media screen and (min-width: 700px) {
+   div.mButtons span:first-child {
+    text-align: left;
+  }
+  div.mButtons span:last-child {
+    text-align: right;
+  }
+  div.mButtons{
+  position: relative;
+  left: 25%;
+  display: table;
+    width: 50%;
+    table-layout: fixed; 
+    margin-top: 20%;
+  }
+  div.mButtons a {
+  display: table-cell;
+    text-align: center;
+  }
+
+  .logo{
+    position: relative;
+
+    width: 80%;
+    z-index: 100;
+    left: 10%;
+    top: 200px;
+}
+
+  .mob{
+    display:none;
+  }
+}
+
+.mainText{
+  padding-left:20%;
+  padding-right:20%;
+}
+
+.lr{
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+.rr{
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+.call{
+  background-color: #C0A28A !important;
+}
+.call:hover{
+  background-color: #a89d95 !important;
+}
+
+
+.lmore{
+
+}
+.lmore:hover{
+   background-color: #87c6db !important;
+
+}
 /* Full height image header */
 .bgimg-1 {
     background-position: center;
@@ -28,20 +92,57 @@ html {
 .w3-bar .w3-button {
     padding: 16px;
 }
-.w3-button:hover{
-  background-color: black !important;
-  color: rgb(59, 193, 255) !important;
+.w3-top{
+
 }
 .yel{
-  background-color: rgb(59, 193, 255);
+  background-color: #98DBF3;
   color: black;
 }
 .yel:hover{
-  background-color: black !important;
-  color: rgb(59, 193, 255) !important;
+  background-color: white;
+  color: #87c6db ;
 }
 .w3-nav{
-  background-color: rgb(59, 193, 255) !important;
+  background-color: #98DBF3;
+
+}
+.mapImage{
+  width:100%;
+}
+@media only screen and (max-width: 700px) {
+  .logo{
+       position: relative;
+       left:4vh;
+    width: 35vh;
+    z-index: 100;
+  }
+ 
+ .fa{
+    color: #98DBF3;
+ } 
+
+ .w3-nav{
+  background-color:rgba(0, 0, 0, 0);
+box-shadow: 0px 0px;
+width: 100%;
+}
+  .lr{
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+  }
+  .rr{
+    border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  }
+  .mButtons{
+    margin-left: 20%;
+  }
+
+  .sr{
+    display: none;
+  }
+
 
 }
 </style>
@@ -50,14 +151,14 @@ html {
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
   <div class="w3-bar w3-nav w3-card" id="myNavbar">
-    <a href="#home" class="w3-bar-item w3-button"><i class="fa fa-home"></i> Specialized Restoration </a>
+    <a href="#home" class="w3-bar-item w3-button lmore"><i class="fa fa-home"></i><img src="logo.png" class="logo mob"></img></a>
 
     <!-- Right-sided navbar links -->
     <div class="w3-right w3-hide-small">
-      <a href="#about" class="w3-bar-item w3-button">ABOUT</a>
-      <a href="#services" class="w3-bar-item w3-button"> SERVICES</a>
-      <a href="#pricing" class="w3-bar-item w3-button"> PRICING</a>
-      <a href="#contact" class="w3-bar-item w3-button"> CONTACT</a>
+      <a href="#about" class="w3-bar-item w3-button lmore">ABOUT</a>
+      <a href="#services" class="w3-bar-item w3-button lmore"> SERVICES</a>
+      <a href="#pricing" class="w3-bar-item w3-button lmore"> PRICING</a>
+      <a href="#contact" class="w3-bar-item w3-button lmore"> CONTACT</a>
     </div>
     <!-- Hide right-floated links on small screens and replace them with a menu icon -->
 
@@ -68,7 +169,7 @@ html {
 </div>
 
 <!-- Sidebar on small screens when clicking the menu icon -->
-<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+<nav class="w3-sidebar w3-bar-block yel w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
   <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
   <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button"> ABOUT</a>
   <a href="#services" onclick="w3_close()" class="w3-bar-item w3-button"> SERVICES</a>
@@ -78,15 +179,17 @@ html {
 
 <!-- Header with full-height image -->
 <header class="bgimg-1 w3-display-container" id="home">
-  <div class="w3-display-left w3-text-white" style="padding:80px">
-    <h1 class="">Specialized Restoration</h1>
-    <div class=" " style="height: 45px;">
+  <div class="w3-text-white" style="padding:80px">
+    <img src="logo.png" class="logo sr"></img>
+
   </div>
   </div>
-  <div class="w3-display-left w3-text-white" style="padding:80px">
-    <div class="w3-row-padding w3-center" style="margin-top:181px"></div>
-    <p><a href="#about" class="w3-button yel w3-padding-large w3-large w3-margin-top ">Learn more</a></p>
-  </div>
+  <div class="w3-display-left w3-text-white" >
+    <div class="mButtons">
+       <a href="#about" class=" w3-button lr yel w3-padding-large w3-large w3-margin-top lmore ">Learn more</a>
+       <a class="w3-button yel rr call w3-padding-large w3-large w3-margin-top " href="tel:1-604-719-1587">Call Now!</a> 
+     </div>
+   </div>
 
   <div class="w3-display-bottomleft w3-text-grey w3-large" style="padding:24px 48px">
 
@@ -95,7 +198,7 @@ html {
 <!-- About Section -->
 <div class="w3-container" style="padding:64px 40px" id="about">
   <h2 class="w3-center">ABOUT THE COMPANY</h2>
-  <p class="w3-large w3-center">Specialized Restoration is a licensed Home Restoration Company. We provide professional, emergency home restoration services to remedy any damage. Our team of certified technicians are equipped to solve any problems which may have disturbed your home. We understand the struggle home owners endure during these emergencies. We strive to be your 1-stop solution to quick and reliable home restoration. We cater to clients throughout the lower mainland. Call us today.</p>
+  <p class="w3-large w3-center mainText">Specialized Restoration is a licensed Home Restoration Company. We provide professional, emergency home restoration services to remedy any damage. Our team of certified technicians are equipped to solve any problems which may have disturbed your home. We understand the struggle home owners endure during these emergencies. We strive to be your 1-stop solution to quick and reliable home restoration. We cater to clients throughout the lower mainland. Call us today.</p>
   <div class="w3-row-padding w3-center" style="margin-top:32px">
     <p>
     </p>
@@ -214,7 +317,8 @@ html {
   <div class="w3-row-padding" style="margin-top:50px">
   <h3>Get a free estimate today! </h3>
   <div class="w3-row-padding" style="margin-top:72px">
-  <p class="w3-medium"> Get you an estimate that will best fit you and your homes needs. Book yours today by calling or sending us a message! Click Below To Contact Us!</p>
+  <p class="w3-medium mainText"> Get you an estimate that will best fit you and your homes needs. Book yours today by calling or sending us a message! Click Below To Contact Us!</p>
+
   </div>
   </div>
   <div class="w3-row-padding" style="margin-top:128px">
@@ -230,10 +334,8 @@ html {
   <p class="w3-center w3-large">Contact us to book a free consultation.</p>
   <div class="w3-row-padding" style="margin-top:32px">
     <div class="w3-half">
-      <p><i class=" fa-fw w3-xxlarge w3-margin-right"></i> </p>
-      <p><i class=" fa-fw w3-xxlarge w3-margin-right"></i> </p>
       <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Vanoucer, B.C</p>
-      <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> +1 (604) 719-1587</p>
+      <p href="tel:1-604-719-1587"><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> +1 (604) 719-1587</p>
       <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> contact@specializedrestoration.ca</p>
 
       <!-- <form action="/action_page.php" target="_blank">
@@ -250,38 +352,23 @@ html {
     </div>
     <div class="w3-half">
       <!-- Add Google Maps -->
-      <img class="image"  src="https://static-maps.yandex.ru/1.x/?lang=en_US&ll=-123.12,49.28276&amp;l=map&z=12">
+      <img class="mapImage"  src="https://static-maps.yandex.ru/1.x/?lang=en_US&ll=-123.12,49.28276&amp;l=map&z=12">
       <!-- <div id="googleMap" class="w3-greyscale" style="width:100%;height:510px;"></div> -->
     </div>
   </div>
 </div>
 
 <!-- Footer -->
-<footer class="w3-center w3-black w3-padding-64">
+<!-- <footer class="w3-center foot w3-padding-64">
   <a href="#home" class="w3-button yel"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
   <div class="w3-xlarge w3-section">
 
 
   </div>
-</footer>
+</footer> -->
 
 <!-- Add Google Maps -->
 <script>
-  function myMap()
-{
-  myCenter=new google.maps.LatLng(49.2827, -123.1207);
-  var mapOptions= {
-    center:myCenter,
-    zoom:10, scrollwheel: false, draggable: false,
-    mapTypeId:google.maps.MapTypeId.ROADMAP
-  };
-  var map=new google.maps.Map(document.getElementById("googleMap"),mapOptions);
-
-  var marker = new google.maps.Marker({
-    position: myCenter,
-  });
-  marker.setMap(map);
-}
 
 
 // Modal Image Gallery
@@ -309,8 +396,6 @@ function w3_close() {
     mySidebar.style.display = "none";
 }
 </script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBBWF5Sm9kqe7NrNRDArhSso3sf-_-JeB8&callback=myMap"></script>
-<script type="text/javascript" src="https://cdn.ywxi.net/js/1.js" async></script>
 
 </body>
 </html>
